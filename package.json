@@ -1,0 +1,41 @@
+{
+  "name": "next-app",
+  "version": "1.0.0",
+  "description": "A Next.js application with pkg and docker. The pkg CLI enables you to package your Node.js project into an executable that can be run even on devices without Node.js installed. — zeit/pkg ",
+  "bin": "server.js",
+  "main": "server.js",
+  "pkg": {
+    "assets": [
+      ".next/**/*"
+    ],
+    "scripts": [
+      ".next/dist/**/*.js"
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".next/**/*",
+      ".next/dist/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "start": "node ./server.js",
+    "start:prod": "NODE_ENV=production node ./server.js",
+    "nxt-dev": "next",
+    "build": "next build",
+    "nxt-start": "next start",
+    "pkg": "pkg . --targets node10-alpine-x64 --out-path pkg"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pkg": "^4.4.0"
+  }
+}
