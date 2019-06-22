@@ -1,5 +1,5 @@
 FROM node:alpine
-MAINTAINER pboulos <pboulos@gmail.com>
+MAINTAINER paboulos
 RUN apk update
 RUN apk add inotify-tools
 EXPOSE 3000
