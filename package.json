@@ -36,6 +36,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "pkg": "^4.4.0"
+    "pkg": "^4.4.3"
   }
 }
